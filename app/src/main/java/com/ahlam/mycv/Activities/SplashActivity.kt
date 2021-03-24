@@ -24,9 +24,9 @@ class SplashActivity : AppCompatActivity() {
 
         Log.e("dddd ", JsonParser.ofString("About me"))
 
-        val list : ArrayList<String> = JsonParser.ofStrArray("Professional Skills")
+        val list : ArrayList<EntityJob> = JsonParser.ofJobsArray("Work Experience")
         for(i in 0 until list.size) {
-            println(list[i])
+            println(list[i].title)
         }
 
 

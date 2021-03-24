@@ -12,8 +12,9 @@ data class EntityJob(
     var employment_type: String,
     var duration: String,
     var description: String
+
 ) {
-    companion object{
+    companion object {
         fun parse(json : JSONObject) : EntityJob {
             return EntityJob(
                 json.getInt("id"),
