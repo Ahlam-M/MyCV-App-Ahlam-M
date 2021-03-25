@@ -1,3 +1,14 @@
+/*
+ * InfoSingleton.kt
+ *
+ * This file was created on 25 Mar 2021
+ * for project "MyCV-Ahlam M"
+ * Copyright (c) 2021. All rights reserved.
+ *
+ * by developer Ahlam Mhmd
+ * Github : Ahlam-M
+ */
+
 package com.ahlam.mycv
 
 import com.ahlam.mycv.utilities.FileManager

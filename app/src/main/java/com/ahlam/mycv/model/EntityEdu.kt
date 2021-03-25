@@ -1,3 +1,14 @@
+/*
+ * EntityEdu.kt
+ *
+ * This file was created on 25 Mar 2021
+ * for project "MyCV-Ahlam M"
+ * Copyright (c) 2021. All rights reserved.
+ *
+ * by developer Ahlam Mhmd
+ * Github : Ahlam-M
+ */
+
 package com.ahlam.mycv.model
 
 import androidx.room.Entity
@@ -15,7 +26,6 @@ data class EntityEdu(
 
     companion object {
         fun parse(json : JSONObject) : EntityEdu {
-            JSONObject().t
             return EntityEdu(
                 json.getInt("id"),
                 json.getString("name"),

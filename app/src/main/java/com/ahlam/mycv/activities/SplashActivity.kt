@@ -12,12 +12,7 @@ class SplashActivity : AppCompatActivity() {
 
 
         val j = JsonParser.ofArray<String>("Languages I Speak")
-        //val e = JsonParser.ofArray<EntityEdu>("Work Experience")
-        //val s = JsonParser.ofArray<String>("Work Experience")
 
-        for (i in 0 until j.size){
-            println("v.size " + j[i])
-        }
 
     }
 }

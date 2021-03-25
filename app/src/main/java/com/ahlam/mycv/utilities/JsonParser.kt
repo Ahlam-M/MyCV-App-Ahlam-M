@@ -1,9 +1,21 @@
+/*
+ * JsonParser.kt
+ *
+ * This file was created on 25 Mar 2021
+ * for project "MyCV-Ahlam M"
+ * Copyright (c) 2021. All rights reserved.
+ *
+ * by developer Ahlam Mhmd
+ * Github : Ahlam-M
+ */
+
 package com.ahlam.mycv
 
 import com.ahlam.mycv.model.EntityEdu
 
 import org.json.JSONArray
 import java.util.ArrayList
+
 
 class JsonParser {
 
@@ -16,6 +28,33 @@ class JsonParser {
          */
         fun ofString(name : String) : String {
             return InfoSingleton.jsonAll.getString(name)
+        }
+
+        /**
+         * this function is responsible for parsing JSONArray of types EntityJob, EntityEdu, String
+         * @name -> json node name
+         * @return -> parsed ArrayList of type T
+         */
+        inline fun <reified T> ofArray(name : String) : ArrayList<T> {
+            //get specific json array from generated json data
+            val array : JSONArray = InfoSingleton.jsonAll.getJSONArray(name)
+
+            //generate array of T type
+            val list : ArrayList<T> = ArrayList()
+
+            //parse json array items
+            for(i in 0 until array.length()) {
+                var parsed : T
+                when(T::class){
+                    //parse item according to type T
+                    EntityJob::class -> parsed = EntityJob.parse(array.getJSONObject(i)) as T
+                    EntityEdu::class -> parsed = EntityEdu.parse(array.getJSONObject(i)) as T
+                    String::class -> parsed = array.getString(i) as T
+                    else -> break
+                }
+                list.add(parsed)
+            }
+            return list
         }
 
         /**
@@ -75,32 +114,7 @@ class JsonParser {
         }
 
 
-        /**
-         * this function is responsible for parsing JSONArray of types EntityJob, EntityEdu, String
-         * @name -> json node name
-         * @return -> parsed ArrayList of type T
-         */
-        inline fun <reified T> ofArray(name : String) : ArrayList<T> {
-            //get specific json array from generated json data
-            val array : JSONArray = InfoSingleton.jsonAll.getJSONArray(name)
 
-            //generate array of T type
-            val list : ArrayList<T> = ArrayList()
-
-            //parse json array items
-            for(i in 0 until array.length()) {
-                var parsed : T
-                when(T::class){
-                    //parse item according to type T
-                    EntityJob::class -> parsed = EntityJob.parse(array.getJSONObject(i)) as T
-                    EntityEdu::class -> parsed = EntityEdu.parse(array.getJSONObject(i)) as T
-                    String::class -> parsed = array.getString(i) as T
-                    else -> break
-                }
-                list.add(parsed)
-            }
-            return list
-        }
     }
 }
 
