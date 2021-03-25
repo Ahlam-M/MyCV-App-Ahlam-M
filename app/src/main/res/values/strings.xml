@@ -4,5 +4,28 @@
     <string name="welcome">Welcome to my CV App</string>
     <string name="app_language_is_kotlin">This app has been developed in Kotlin</string>
 
+
+
+    <!-- CV sections -->
+    <!-- WARNING : this strings matches strings in the json info file -->
+    <string name="about_me">About me</string>
+    <string name="personal_info">Personal info.</string>
+    <string name="contact_info">Contact info.</string>
     <string name="work_experience">Work Experience</string>
+    <string name="professional_skills">Professional Skills</string>
+    <string name="languages_I_speak">Languages I Speak</string>
+    <string name="techniques">Techniques</string>
+    <string name="design_patterns">Design Patterns</string>
+    <string name="tech_tools">Tech. Tools</string>
+    <string name="supporting_tools">Supporting Tools</string>
+    <string name="IT_courses">IT Courses</string>
+    <string name="other_courses">Other Courses</string>
+    <string name="personal_skills">Personal Skills</string>
+    <string name="familiar_with_OSs">Familiar with (OSs)</string>
+    <string name="methodologies">Methodologies</string>
+    <string name="education">Education</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="other_skills">Other Skills</string>
+
+
 </resources>
