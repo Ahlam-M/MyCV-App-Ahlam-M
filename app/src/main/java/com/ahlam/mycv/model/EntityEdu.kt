@@ -1,4 +1,4 @@
-package com.ahlam.mycv
+package com.ahlam.mycv.model
 
 import androidx.room.Entity
 import org.json.JSONObject
@@ -12,8 +12,10 @@ data class EntityEdu(
     var from: String
 
 ) {
+
     companion object {
         fun parse(json : JSONObject) : EntityEdu {
+            JSONObject().t
             return EntityEdu(
                 json.getInt("id"),
                 json.getString("name"),

@@ -1,6 +1,6 @@
 package com.ahlam.mycv
 
-import com.ahlam.mycv.Utilities.FileManager
+import com.ahlam.mycv.utilities.FileManager
 import org.json.JSONObject
 
 
