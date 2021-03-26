@@ -15,6 +15,11 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 
+
+fun getStr(id : Int) : String {
+    return MyApplication.globalContext.getString(id)
+}
+
 class MyApplication : Application() {
 
     companion object {
@@ -26,5 +31,4 @@ class MyApplication : Application() {
         super.onCreate()
         globalContext = this.applicationContext
     }
-
 }

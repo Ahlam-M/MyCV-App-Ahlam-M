@@ -17,7 +17,7 @@ import org.json.JSONObject
 @Entity
 data class EntityEdu(
 
-    val id: Int,
+    var id: Int,
     var name: String,
     var type: String,
     var from: String

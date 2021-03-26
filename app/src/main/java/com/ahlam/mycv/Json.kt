@@ -1,12 +1,17 @@
 package com.ahlam.mycv
 
+import org.json.JSONObject
 
-@Target(AnnotationTarget.VALUE_PARAMETER)
-annotation class Json(val name: String)
+@Target(AnnotationTarget.CLASS)
+annotation class JSON
+inline fun <reified T> parse(j : JSONObject) : T{
 
-fun toJson(v : Any){
 
-    when(v::class){
+    return T::class.java.newInstance()
+   // when(v::class){
         //todo EntityJob -> v.
-    }
+
+                //EntityPersonInfo::class -> T.parse(j)
+    //}
+
 }

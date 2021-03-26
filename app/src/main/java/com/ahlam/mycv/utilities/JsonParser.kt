@@ -11,9 +11,11 @@
 
 package com.ahlam.mycv
 
+import com.ahlam.mycv.model.EntityContactInfo
 import com.ahlam.mycv.model.EntityEdu
-
+import com.ahlam.mycv.model.EntityPersonInfo
 import org.json.JSONArray
+import org.json.JSONObject
 import java.util.ArrayList
 
 
@@ -26,8 +28,24 @@ class JsonParser {
          * @name -> json node name
          * @return -> string data
          */
+        @Deprecated("replaced with <T> ofObject<T>() for all types", ReplaceWith("<T> ofObject<T>()"))
         fun ofString(name : String) : String {
             return InfoSingleton.jsonAll.getString(name)
+        }
+
+        inline fun <reified T> ofObject(name : String) : T {
+
+            val obj = InfoSingleton.jsonAll.get(name)
+
+            val parsed : T = when(T::class){
+                //parse item according to type T
+                EntityPersonInfo::class -> EntityPersonInfo.parse(obj as JSONObject) as T
+                EntityContactInfo::class -> EntityContactInfo.parse(obj as JSONObject) as T
+                String::class -> InfoSingleton.jsonAll.getString(obj as String) as T
+                //else -> T::class.javaClass.getMethod("parse").invoke(InfoSingleton.jsonAll.getJSONObject(name)) as T
+                else -> T::class.java.newInstance()
+            }
+            return parsed
         }
 
         /**
@@ -45,11 +63,11 @@ class JsonParser {
             //parse json array items
             for(i in 0 until array.length()) {
                 var parsed : T
-                when(T::class){
+                parsed = when(T::class){
                     //parse item according to type T
-                    EntityJob::class -> parsed = EntityJob.parse(array.getJSONObject(i)) as T
-                    EntityEdu::class -> parsed = EntityEdu.parse(array.getJSONObject(i)) as T
-                    String::class -> parsed = array.getString(i) as T
+                    EntityJob::class -> EntityJob.parse(array.getJSONObject(i)) as T
+                    EntityEdu::class -> EntityEdu.parse(array.getJSONObject(i)) as T
+                    String::class -> array.getString(i) as T
                     else -> break
                 }
                 list.add(parsed)

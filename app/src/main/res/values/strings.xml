@@ -4,7 +4,17 @@
     <string name="welcome">Welcome to my CV App</string>
     <string name="app_language_is_kotlin">This app has been developed in Kotlin</string>
 
+    <string name="name">Name</string>
+    <string name="profession_title">Profession Title</string>
+    <string name="dob">Birth date</string>
+    <string name="social_state">Social State</string>
+    <string name="languages">Languages</string>
 
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="github">GitHub</string>
 
     <!-- CV sections -->
     <!-- WARNING : this strings matches strings in the json info file -->
@@ -26,6 +36,5 @@
     <string name="education">Education</string>
     <string name="hobbies">Hobbies</string>
     <string name="other_skills">Other Skills</string>
-
 
 </resources>

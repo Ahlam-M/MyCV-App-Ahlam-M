@@ -1,7 +1,7 @@
 /*
  * EntityJob.kt
  *
- * This file was created on 25 Mar 2021
+ * This file was created on 26 Mar 2021
  * for project "MyCV-Ahlam M"
  * Copyright (c) 2021. All rights reserved.
  *
@@ -14,10 +14,11 @@ package com.ahlam.mycv
 import androidx.room.Entity
 import org.json.JSONObject
 
+
 @Entity
 data class EntityJob(
 
-    val id: Int,
+    var id: Int,
     var title: String,
     var place: String,
     var employment_type: String,
