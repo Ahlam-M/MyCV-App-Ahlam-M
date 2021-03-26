@@ -18,21 +18,14 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.util.ArrayList
 
-
 class JsonParser {
 
     companion object{
-
         /**
-         * this function is responsible for getting string value from json file
+         * this function is responsible for getting object value from json file
          * @name -> json node name
-         * @return -> string data
+         * @return -> parsed object data of type T
          */
-        @Deprecated("replaced with <T> ofObject<T>() for all types", ReplaceWith("<T> ofObject<T>()"))
-        fun ofString(name : String) : String {
-            return InfoSingleton.jsonAll.getString(name)
-        }
-
         inline fun <reified T> ofObject(name : String) : T {
 
             val obj = InfoSingleton.jsonAll.get(name)
@@ -73,6 +66,17 @@ class JsonParser {
                 list.add(parsed)
             }
             return list
+        }
+
+
+        /**
+         * this function is responsible for getting string value from json file
+         * @name -> json node name
+         * @return -> string data
+         */
+        @Deprecated("replaced with <T> ofObject<T>() for all types", ReplaceWith("<T> ofObject<T>()"))
+        fun ofString(name : String) : String {
+            return InfoSingleton.jsonAll.getString(name)
         }
 
         /**
