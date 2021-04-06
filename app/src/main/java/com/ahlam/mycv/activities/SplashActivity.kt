@@ -1,3 +1,14 @@
+/*
+ * SplashActivity.kt
+ *
+ * This file was created on 06 Apr 2021
+ * for project "MyCV-Ahlam M"
+ * Copyright (c) 2021. All rights reserved.
+ *
+ * by developer Ahlam Mhmd
+ * Github : Ahlam-M
+ */
+
 package com.ahlam.mycv.activities
 
 import android.os.Bundle
@@ -13,11 +24,6 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
 
-        //val aboutme : String = JsonParser.ofString(getString(R.string.about_me))
 
-        //val pinfo : String = JsonParser.ofString(getString(R.string.personal_info))
-
-        Log.e("ff ", JsonParser.ofObject<EntityPersonInfo>(getString(R.string.personal_info)).toString())
-        Log.e("ff ", JsonParser.ofObject<EntityContactInfo>(getString(R.string.contact_info)).toString())
     }
 }
