@@ -14,12 +14,13 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_splash_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             android:layout_alignParentTop="true"
-            app:srcCompat="@drawable/bkgrnd_splash_1"/>
+            android:src="@drawable/bkgrnd_splash_1"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
@@ -27,7 +28,7 @@
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             android:layout_alignParentBottom="true"
-            app:srcCompat="@drawable/bkgrnd_splash_2"/>
+            android:src="@drawable/bkgrnd_splash_2"/>
 
     </RelativeLayout>
 
