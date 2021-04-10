@@ -28,12 +28,14 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        //set values to the views
         findViewById<TextView>(R.id.txt_name).text = InfoSingleton.personal_info.name
         findViewById<TextView>(R.id.txt_profession_title).text = InfoSingleton.personal_info.profession_title
 
 
-        Timer().schedule(33000){
+        Timer().schedule(3000){
 
+            //got to intro activity
             val intent = Intent(this@SplashActivity, IntroActivity::class.java)
             startActivity(intent)
             this@SplashActivity.finish()
