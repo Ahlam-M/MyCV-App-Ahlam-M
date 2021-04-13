@@ -12,12 +12,13 @@
 package com.ahlam.mycv.utilities
 
 import android.os.CountDownTimer
+import android.util.Log
 import android.widget.TextView
 
 /**
  * This class was created to add typing effect to texts.
  */
-class TypingTerminalEffect {
+abstract class TypingTerminalEffect {
 
     companion object {
 
@@ -26,22 +27,34 @@ class TypingTerminalEffect {
         fun startTyping(txt: TextView, string: String) {
             val chararray = string.toCharArray()
             var c = 0
+            var countAll = chararray.size
 
             //start at part 0.02 of second
             //interval set to 0.02 to increase speed of motion
-            object : CountDownTimer((200 * chararray.size).toLong(), 200) {
+            object : CountDownTimer((200 * countAll).toLong(), 200) {
                 override fun onTick(secondsUntilDone: Long) {
 
                     //remove cursor (_)
                     txt.text = txt.text.toString().removeSuffix("_")
+
                     //add char to text
-                    txt.append(chararray[c++].toString())
+                    if(chararray[c] == '#'){
+                        //add > before each newline
+                        txt.text.toString().replace("#", "\n> ")
+                        countAll += 2
+                        c++
+                    } else {
+                        txt.append(chararray[c++].toString())
+                    }
+
                     //re-append cursor
                     txt.append("_")
                 }
                 override fun onFinish(){
                     //start cursor anim
                     cursorAnim(txt)
+
+
                     //cancel timer
                     this.cancel()
                 }
@@ -49,6 +62,7 @@ class TypingTerminalEffect {
         }
 
         fun cursorAnim(txt: TextView) {
+
             object : CountDownTimer((500 * 10000).toLong(), 500) {
 
                 override fun onTick(secondsUntilDone: Long) {
@@ -62,10 +76,13 @@ class TypingTerminalEffect {
                 override fun onFinish(){
                     //cancel timer
                     this.cancel()
+
                 }
             }.start()
         }
     }
+
+    abstract fun onDone()
 }
 
 

@@ -36,6 +36,8 @@ class InfoSingleton {
         val personal_info =  JsonParser.ofObject<EntityPersonInfo>(getStr(R.string.personal_info))
         val contact_info = JsonParser.ofObject<EntityContactInfo>(getStr(R.string.contact_info))
 
+        val about_me = JsonParser.ofObject<String>(getStr(R.string.about_me))
+
         //arrays
         val work_experience = JsonParser.ofArray<EntityJob>(getStr(R.string.work_experience))
         val education = JsonParser.ofArray<EntityEdu>(getStr(R.string.education))
