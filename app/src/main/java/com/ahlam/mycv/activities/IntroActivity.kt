@@ -20,7 +20,7 @@ class IntroActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.txt_intro),
             "Welcome to my CV App This app has been developed in Kotlin")
 
-        //todo terminal cursor
+
     }
 
 
