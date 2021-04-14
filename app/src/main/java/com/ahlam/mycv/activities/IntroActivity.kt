@@ -1,5 +1,6 @@
 package com.ahlam.mycv.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View.VISIBLE
 import android.view.animation.Animation
@@ -13,7 +14,6 @@ import com.ahlam.mycv.utilities.TypingTerminalEffect
 
 
 class IntroActivity : AppCompatActivity() , TypingTerminalEffect {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +46,12 @@ class IntroActivity : AppCompatActivity() , TypingTerminalEffect {
         //start typing
         typing.startTyping(txtTerminal, InfoSingleton.about_me)
 
-
+        //go to cv
+        btnNext.setOnClickListener {
+            val intent = Intent(this@IntroActivity, MainActivity::class.java)
+            startActivity(intent)
+            this@IntroActivity.finish()
+        }
     }
 }
 
