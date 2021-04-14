@@ -18,9 +18,7 @@ import android.widget.TextView
 /**
  * This class was created to add typing effect to texts.
  */
-abstract class TypingTerminalEffect {
-
-    companion object {
+interface TypingTerminalEffect {
 
         /* This method is responsible for showing a string adding to text view
         * with effect of terminal typing  */
@@ -28,8 +26,8 @@ abstract class TypingTerminalEffect {
             val chararray = string.toCharArray()
             var c = 0
 
-            //start at part 0.02 of second
-            //interval set to 0.02 to increase speed of motion
+            //start at part 0.015 of second
+            //interval set to 0.015 to increase speed of process
             object : CountDownTimer((150 * (chararray.size + 2)).toLong(), 150) {
                 override fun onTick(secondsUntilDone: Long) {
 
@@ -52,9 +50,13 @@ abstract class TypingTerminalEffect {
                     //re-append cursor
                     txt.append("_")
                 }
+
                 override fun onFinish(){
                     //start cursor anim
                     cursorAnim(txt)
+
+                    //invoke callback
+                    this@TypingTerminalEffect.onTypingDone()
 
                     //cancel timer
                     this.cancel()
@@ -80,9 +82,10 @@ abstract class TypingTerminalEffect {
                 }
             }.start()
         }
-    }
 
-    abstract fun onDone()
+
+    //on typing done callback
+    fun onTypingDone(){}
 }
 
 

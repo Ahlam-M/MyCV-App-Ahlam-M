@@ -37,6 +37,7 @@
         android:layout_margin="10dp"
         android:padding="10dp"
         android:gravity="center"
+        android:visibility="invisible"
         android:background="@drawable/bkgrnd_btn_rnd_pink"
         android:textColor="@color/red_oxide"
         android:drawableRight="@drawable/ic_arrow_next_red"

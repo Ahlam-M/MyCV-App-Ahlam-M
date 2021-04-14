@@ -15,7 +15,6 @@
 
     <style name="Theme.MyCVAhlamM.ActionBarStyle" parent="@android:style/Widget.Holo.ActionBar">
         <item name="titleTextColor">@color/white</item>
-
     </style>
 
 
