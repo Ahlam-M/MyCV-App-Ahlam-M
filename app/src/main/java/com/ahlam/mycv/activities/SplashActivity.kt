@@ -33,7 +33,7 @@ class SplashActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txt_profession_title).text = InfoSingleton.personal_info.profession_title
 
 
-        Timer().schedule(3000){
+        Timer().schedule(13000){
 
             //got to intro activity
             val intent = Intent(this@SplashActivity, IntroActivity::class.java)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ gr_splash.xml
+  ~ gr_frgrnd_trans.xml
   ~
-  ~ This file was created on 06 Apr 2021
-  ~ for project "MyCV-Ahlam M"
+  ~ Created on 14 Apr 2021
+  ~ for "MyCV-Ahlam M"
   ~ Copyright (c) 2021. All rights reserved.
   ~
   ~ by developer Ahlam Mhmd
@@ -14,7 +14,9 @@
     android:shape="rectangle">
 
     <gradient
+        android:angle="270"
         android:type="linear"
-        android:startColor="@color/red_oxide"
-        android:endColor="@color/dark_purple"/>
+        android:startColor="#23531E1E"
+        android:centerColor="#F02A252E"
+        android:endColor="#3C2A252E"/>
 </shape>
