@@ -27,11 +27,10 @@ abstract class TypingTerminalEffect {
         fun startTyping(txt: TextView, string: String) {
             val chararray = string.toCharArray()
             var c = 0
-            var countAll = chararray.size
 
             //start at part 0.02 of second
             //interval set to 0.02 to increase speed of motion
-            object : CountDownTimer((200 * countAll).toLong(), 200) {
+            object : CountDownTimer((150 * (chararray.size + 2)).toLong(), 150) {
                 override fun onTick(secondsUntilDone: Long) {
 
                     //remove cursor (_)
@@ -40,20 +39,22 @@ abstract class TypingTerminalEffect {
                     //add char to text
                     if(chararray[c] == '#'){
                         //add > before each newline
-                        txt.text.toString().replace("#", "\n> ")
-                        countAll += 2
-                        c++
+                        txt.text.toString().replace("#", "")
+                        txt.append("\n> ")
+
                     } else {
-                        txt.append(chararray[c++].toString())
+                        //add letter
+                        txt.append(chararray[c].toString())
                     }
 
+                    //next letter
+                    c++
                     //re-append cursor
                     txt.append("_")
                 }
                 override fun onFinish(){
                     //start cursor anim
                     cursorAnim(txt)
-
 
                     //cancel timer
                     this.cancel()
@@ -76,7 +77,6 @@ abstract class TypingTerminalEffect {
                 override fun onFinish(){
                     //cancel timer
                     this.cancel()
-
                 }
             }.start()
         }
