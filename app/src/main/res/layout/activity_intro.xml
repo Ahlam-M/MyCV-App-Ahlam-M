@@ -6,39 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".activities.IntroActivity"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:gravity="center">
+    android:background="@color/dark_purple"
+    android:padding="20dp">
 
-    <TextView
-        android:id="@+id/txt_name"
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/txt_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:textSize="18sp"
+            android:letterSpacing="0.1"
+            android:lineSpacingExtra="10dp"
+            android:textColor="@color/white"
+            android:textAlignment="gravity"
+            />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_gravity="right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ahlam Mhmd"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp"
-        />
-
-    <TextView
-        android:id="@+id/txt_profession_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="IT Engineer | Mobile Applications Developer"
-        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
         android:gravity="center"
-        android:textAlignment="gravity"
-        android:layout_marginBottom="10dp"
-        />
-
-    <TextView
-        android:id="@+id/txt_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to my CV App\nThis app has been developed in Kotlin"
-        android:textSize="20sp"
-        android:gravity="left"
-        android:textAlignment="gravity"
-
-        />
+        android:visibility="invisible"
+        android:background="@drawable/bkgrnd_btn_rnd_pink"
+        android:textColor="@color/red_oxide"
+        android:drawableRight="@drawable/ic_arrow_next_red"
+        android:text="@string/next"/>
 
 </LinearLayout>

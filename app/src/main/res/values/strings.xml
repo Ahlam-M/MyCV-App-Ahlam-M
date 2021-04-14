@@ -4,6 +4,9 @@
     <string name="welcome">Welcome to my CV App</string>
     <string name="app_language_is_kotlin">This app has been developed in Kotlin</string>
 
+
+    <string name="next">Go to CV</string>
+
     <string name="name">Name</string>
     <string name="profession_title">Profession Title</string>
     <string name="dob">Birth date</string>

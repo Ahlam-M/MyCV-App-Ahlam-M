@@ -1,15 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyCVAhlamM" parent="Theme.AppCompat.Light">
+    <style name="Theme.MyCVAhlamM" parent="Theme.AppCompat">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/dark_purple</item>
         <item name="colorPrimaryDark">@color/dark_purple</item>
-
+        <item name="colorAccent">@color/red_oxide</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/red_oxide</item>
         <!-- Customize your theme here. -->
+
+        <item name="android:actionBarStyle">@style/Theme.MyCVAhlamM.ActionBarStyle</item>
     </style>
+
+    <style name="Theme.MyCVAhlamM.ActionBarStyle" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
 
     <style name="Theme.MyCVAhlamM.NoActionBar" parent="Theme.MyCVAhlamM">
         <item name = "android:windowActionBar">false</item>
