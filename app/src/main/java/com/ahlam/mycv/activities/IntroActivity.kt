@@ -2,6 +2,7 @@ package com.ahlam.mycv.activities
 
 import android.content.Intent
 import android.os.Bundle
+
 import android.view.View.VISIBLE
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -11,13 +12,17 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.R
 import com.ahlam.mycv.utilities.TypingTerminalEffect
-
+import com.ahlam.mycv.utilities.setCustomActionbar
 
 class IntroActivity : AppCompatActivity() , TypingTerminalEffect {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
+
+        //show custom actionbar
+        setCustomActionbar(this@IntroActivity, getString(R.string.about_me))
+
 
         //hock views
         val txtTerminal = findViewById<TextView>(R.id.txt_intro)
