@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/about_me"
+
             android:name=".activities.IntroActivity"
             android:theme="@style/Theme.MyCVAhlamM"/>
         <activity
