@@ -1,0 +1,23 @@
+<!--
+  ~ ic_duration.xml
+  ~
+  ~ Created on 18 Apr 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="17dp"
+    android:height="19dp"
+    android:viewportWidth="17"
+    android:viewportHeight="19">
+  <path
+      android:pathData="M13.508,5.233l0.959,-1a0.759,0.759 0,0 0,0 -1.118,0.719 0.719,0 0,0 -0.559,-0.24 0.8,0.8 0,0 0,-0.559 0.24l-1,0.959a7.63,7.63 0,0 0,-3.955 -1.638L8.394,1.6h0.8a0.8,0.8 0,0 0,0 -1.6h-3.2a0.8,0.8 0,1 0,0 1.6h0.8v0.839a7.59,7.59 0,1 0,6.711 2.8ZM7.596,15.978a5.992,5.992 0,1 1,5.992 -5.992,5.992 5.992,0 0,1 -5.992,5.992Z"
+      android:fillColor="#b0b1b1"/>
+  <path
+      android:pathData="M10.796,9.581h-2.49v-2.49a0.711,0.711 0,1 0,-1.423 0v3.912h3.912a0.711,0.711 0,1 0,0 -1.423Z"
+      android:fillColor="#b0b1b1"/>
+</vector>
