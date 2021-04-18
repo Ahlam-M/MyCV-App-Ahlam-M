@@ -4,20 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".activities.MainActivity">
 
     <FrameLayout
-        android:id="@+id/fragment_main"
+        android:id="@+id/frame_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bttm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        app:elevation="5dp"
+        app:elevation="20dp"
         app:labelVisibilityMode="labeled"
         app:itemIconTint="@drawable/sel_bttm_ic"
         app:itemTextColor="@drawable/sel_bttm_txt"
