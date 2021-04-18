@@ -1,0 +1,23 @@
+<!--
+  ~ ic_place.xml
+  ~
+  ~ Created on 18 Apr 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="15dp"
+    android:height="20dp"
+    android:viewportWidth="15"
+    android:viewportHeight="20">
+  <path
+      android:pathData="M7.212,5.279A1.155,1.155 0,1 1,6.053 6.438,1.117 1.117,0 0,1 7.212,5.279M7.212,3.738a2.7,2.7 0,1 0,2.7 2.7A2.7,2.7 0,0 0,7.212 3.738Z"
+      android:fillColor="#b0b1b1"/>
+  <path
+      android:pathData="M7.132,1.678a5.549,5.549 0,0 1,5.454 5.874c0,3.356 -3.608,7.007 -5.454,8.895C5.286,14.558 1.678,10.7 1.678,7.552a5.676,5.676 0,0 1,5.454 -5.874m0,-1.678C2.979,0 0,3.4 0,7.552s4.825,8.936 6.545,10.657a0.8,0.8 0,0 0,1.175 0c1.72,-1.72 6.545,-6.419 6.545,-10.657S11.286,0 7.132,0Z"
+      android:fillColor="#b0b1b1"/>
+</vector>

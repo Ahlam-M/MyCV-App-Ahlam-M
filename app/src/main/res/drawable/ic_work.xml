@@ -1,0 +1,20 @@
+<!--
+  ~ ic_mi_work.xml
+  ~
+  ~ Created on 15 Apr 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="17dp"
+    android:height="17dp"
+    android:viewportWidth="17"
+    android:viewportHeight="17">
+  <path
+      android:pathData="M14.318,2.938h-3.75v-2.2A0.71,0.71 0,0 0,9.886 0L5.114,0a0.71,0.71 0,0 0,-0.682 0.734v2.2L0.682,2.934A0.71,0.71 0,0 0,0 3.672L0,13.954a0.71,0.71 0,0 0,0.682 0.734L14.318,14.688A0.71,0.71 0,0 0,15 13.954L15,3.672A0.71,0.71 0,0 0,14.318 2.938ZM5.8,1.469L9.2,1.469L9.2,2.938L5.8,2.938ZM13.641,4.407v2.35A12.172,12.172 0,0 1,7.5 8.483a12.172,12.172 0,0 1,-6.136 -1.726L1.364,4.407ZM1.364,13.22L1.364,8.409a12.834,12.834 0,0 0,5.455 1.506L6.819,11.2h1.364L8.183,9.915a12.834,12.834 0,0 0,5.455 -1.506L13.638,13.22Z"
+      android:fillColor="#b0b1b1"/>
+</vector>
