@@ -13,11 +13,20 @@
     <string name="social_state">Social State</string>
     <string name="languages">Languages</string>
 
+
     <string name="phone">Phone</string>
     <string name="email">Email</string>
     <string name="whatsapp">WhatsApp</string>
     <string name="linkedin">LinkedIn</string>
     <string name="github">GitHub</string>
+
+
+    <string name="work">Work</string>
+    <string name="tasks">Tasks</string>
+    <string name="tech">Tech</string>
+    <string name="edu_cer">Edu-Cer</string>
+    <string name="personal">Personal</string>
+
 
     <!-- CV sections -->
     <!-- WARNING : this strings matches strings in the json info file -->

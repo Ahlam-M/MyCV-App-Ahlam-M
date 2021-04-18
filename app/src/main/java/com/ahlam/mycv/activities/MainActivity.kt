@@ -13,5 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         //show custom actionbar
         setCustomActionbar(this@MainActivity, InfoSingleton.personal_info.name + " CV")
+
+        //supportFragmentManager.findFragmentById()
     }
 }
