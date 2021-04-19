@@ -1,12 +1,14 @@
 package com.ahlam.mycv.activities
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.R
+import com.ahlam.mycv.fragments.TasksFragment
 import com.ahlam.mycv.fragments.WorkExpFragment
 import com.ahlam.mycv.utilities.setCustomActionbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -30,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         //select first fragment by default
         bottomNavigationView.selectedItemId = R.id.mi_work_exp
 
-
     }
 
     private val onBottomNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.mi_tasks -> {
-                //TODO ft.replace(R.id.frame_main, fragment.newInstance()).commit()
+                ft.replace(R.id.frame_main, TasksFragment.newInstance()).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.mi_techniques -> {
