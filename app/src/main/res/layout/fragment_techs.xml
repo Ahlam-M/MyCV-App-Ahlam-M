@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ fragment_techs.xml
+  ~
+  ~ Created on 19 Apr 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragments.TechsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:text="@string/techniques"
+            android:textColor="@color/red_oxide"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_langs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20sp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/illu_langs" />
+
+            <ImageView
+                android:id="@+id/img_tech_tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_langs"
+                android:layout_alignRight="@id/img_langs"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/illu_tech_tools" />
+
+            <ImageView
+                android:id="@+id/img_agile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_langs"
+                android:layout_alignLeft="@id/img_langs"
+                android:layout_toLeftOf="@id/img_tech_tools"
+                android:scaleType="fitXY"
+                android:src="@drawable/illu_agile" />
+
+            <LinearLayout
+                android:id="@+id/img_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_agile"
+                android:layout_alignLeft="@id/img_agile"
+                android:layout_alignRight="@id/img_tech_tools"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/illu_dp"
+                android:orientation="horizontal"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
