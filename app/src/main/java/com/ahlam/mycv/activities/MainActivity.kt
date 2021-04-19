@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.R
 import com.ahlam.mycv.fragments.TasksFragment
+import com.ahlam.mycv.fragments.TechsFragment
 import com.ahlam.mycv.fragments.WorkExpFragment
 import com.ahlam.mycv.utilities.setCustomActionbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.mi_techniques -> {
-                //TODO ft.replace(R.id.frame_main, fragment.newInstance()).commit()
+                ft.replace(R.id.frame_main, TechsFragment.newInstance()).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.mi_edu -> {
