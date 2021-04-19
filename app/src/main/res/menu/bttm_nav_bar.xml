@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ bttm_nav_bar.xml
+  ~
+  ~ Created on 15 Apr 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/mi_work_exp"
+            android:title="@string/work"
+            android:icon="@drawable/ic_mi_work" />
+        <item
+            android:id="@+id/mi_tasks"
+            android:title="@string/tasks"
+            android:icon="@drawable/ic_mi_tasks"/>
+        <item
+            android:id="@+id/mi_techniques"
+            android:title="@string/techniques"
+            android:icon="@drawable/ic_mi_tech"/>
+        <item
+            android:id="@+id/mi_edu"
+            android:title="@string/edu_cer"
+            android:icon="@drawable/ic_mi_edu_cer"/>
+        <item
+            android:id="@+id/mi_personal"
+            android:title="@string/personal"
+            android:icon="@drawable/ic_mi_per"/>
+    </group>
+</menu>

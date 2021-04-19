@@ -1,0 +1,23 @@
+<!--
+  ~ ic_tech.xml
+  ~
+  ~ Created on 15 Apr 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="17dp"
+    android:height="17dp"
+    android:viewportWidth="17"
+    android:viewportHeight="17">
+  <path
+      android:pathData="M11.028,5.514L5.514,5.514v5.514h5.514ZM9.649,9.65L6.893,9.65L6.893,6.893h2.757Z"
+      android:fillColor="#b0b1b1"/>
+  <path
+      android:pathData="M15.165,9.65L13.789,9.65L13.789,6.889h1.379a0.689,0.689 0,1 0,0 -1.379L13.789,5.51L13.789,3.446a0.689,0.689 0,0 0,-0.689 -0.689L11.029,2.757L11.029,1.378a0.689,0.689 0,1 0,-1.379 0L9.65,2.757L6.889,2.757L6.889,1.378a0.689,0.689 0,1 0,-1.379 0L5.51,2.757L3.446,2.757a0.689,0.689 0,0 0,-0.689 0.689L2.757,5.514L1.378,5.514a0.689,0.689 0,1 0,0 1.379L2.757,6.893v2.757L1.378,9.65a0.689,0.689 0,1 0,0 1.379L2.757,11.029v2.068a0.689,0.689 0,0 0,0.689 0.689L5.514,13.786v1.379a0.689,0.689 0,1 0,1.379 0L6.893,13.789h2.757v1.379a0.689,0.689 0,1 0,1.379 0L11.029,13.789h2.068a0.689,0.689 0,0 0,0.689 -0.689L13.786,11.029h1.379a0.689,0.689 0,1 0,0 -1.379ZM12.408,12.407L4.136,12.407L4.136,4.136h8.272Z"
+      android:fillColor="#b0b1b1"/>
+</vector>
