@@ -26,15 +26,19 @@ import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.MyApplication.Companion.globalContext
 import com.ahlam.mycv.R
 
+/**
+ * this class is used to display the work experiences.
+ */
 class WorkExpFragment : Fragment() {
 
     companion object {
+        @JvmStatic
         fun newInstance() = WorkExpFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val rootView = inflater.inflate(R.layout.work_exp_fragment, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_work_exp, container, false)
 
         //hock widget
         val listViewWork : ListView = rootView.findViewById(R.id.lv_work_expr)
