@@ -8,7 +8,7 @@
   ~ by developer Ahlam Mhmd
   ~ Github : Ahlam-M
   -->
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +20,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
@@ -36,7 +36,9 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp">
 
             <ImageView
                 android:id="@+id/img_langs"
@@ -44,9 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginBottom="20sp"
                 android:layout_centerHorizontal="true"
-                android:scaleType="centerCrop"
                 android:src="@drawable/illu_langs" />
 
             <ImageView
@@ -56,7 +56,6 @@
                 android:layout_below="@id/img_langs"
                 android:layout_alignRight="@id/img_langs"
                 android:layout_centerVertical="true"
-                android:scaleType="fitXY"
                 android:src="@drawable/illu_tech_tools" />
 
             <ImageView
@@ -66,22 +65,21 @@
                 android:layout_below="@id/img_langs"
                 android:layout_alignLeft="@id/img_langs"
                 android:layout_toLeftOf="@id/img_tech_tools"
-                android:scaleType="fitXY"
                 android:src="@drawable/illu_agile" />
 
             <LinearLayout
                 android:id="@+id/img_dp"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/img_agile"
                 android:layout_alignLeft="@id/img_agile"
                 android:layout_alignRight="@id/img_tech_tools"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/illu_dp"
                 android:orientation="horizontal"/>
         </RelativeLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
