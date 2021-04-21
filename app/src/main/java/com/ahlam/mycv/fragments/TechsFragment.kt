@@ -17,6 +17,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ahlam.mycv.R
+import com.ahlam.mycv.utilities.typeface
 
 class TechsFragment : Fragment() {
 
@@ -26,6 +27,12 @@ class TechsFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_techs, container, false)
+
+        val rootView = inflater.inflate(R.layout.fragment_techs, container, false)
+
+        //set custom font
+        typeface(rootView)
+
+        return  rootView
     }
 }
