@@ -12,6 +12,7 @@ import com.ahlam.mycv.fragments.TasksFragment
 import com.ahlam.mycv.fragments.TechsFragment
 import com.ahlam.mycv.fragments.WorkExpFragment
 import com.ahlam.mycv.utilities.setCustomActionbar
+import com.ahlam.mycv.utilities.typeface
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -23,8 +24,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //set custom font
+        typeface(this@MainActivity)
+
         //show custom actionbar
         setCustomActionbar(this@MainActivity, InfoSingleton.personal_info.name + " CV")
+
+
 
         //hock bttm nav bar
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_bttm)

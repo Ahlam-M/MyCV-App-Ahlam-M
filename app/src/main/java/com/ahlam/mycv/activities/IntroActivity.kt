@@ -11,8 +11,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.R
+import com.ahlam.mycv.utilities.MyFonts
 import com.ahlam.mycv.utilities.TypingTerminalEffect
 import com.ahlam.mycv.utilities.setCustomActionbar
+import com.ahlam.mycv.utilities.typeface
 
 class IntroActivity : AppCompatActivity() , TypingTerminalEffect {
 
@@ -20,13 +22,18 @@ class IntroActivity : AppCompatActivity() , TypingTerminalEffect {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
 
+        //set custom font
+        typeface(this@IntroActivity, MyFonts.TERMINAL)
+
         //show custom actionbar
         setCustomActionbar(this@IntroActivity, getString(R.string.about_me))
-
 
         //hock views
         val txtTerminal = findViewById<TextView>(R.id.txt_intro)
         val btnNext = findViewById<Button>(R.id.btn_next)
+
+        //typeface button with default font
+        typeface(btnNext)
 
         //button anim slide + show
         val slideLTR: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.slide_ltr)

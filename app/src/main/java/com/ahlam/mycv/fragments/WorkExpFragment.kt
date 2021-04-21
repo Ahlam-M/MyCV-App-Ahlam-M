@@ -25,6 +25,7 @@ import com.ahlam.mycv.EntityJob
 import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.MyApplication.Companion.globalContext
 import com.ahlam.mycv.R
+import com.ahlam.mycv.utilities.typeface
 
 /**
  * this class is used to display the work experiences.
@@ -45,6 +46,8 @@ class WorkExpFragment : Fragment() {
         //set adapter
         listViewWork.adapter = JobsListAdapter()
 
+        //set custom font
+        typeface(rootView)
         return rootView
     }
 }
@@ -68,6 +71,9 @@ class JobsListAdapter : BaseAdapter() {
 
         //disable clicks
         rowView.setOnClickListener(null)
+
+        //set custom font
+        typeface(rowView)
 
         return rowView
     }

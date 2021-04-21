@@ -16,7 +16,8 @@
         android:text="@string/work_experience"
         android:textColor="@color/red_oxide"
         android:textSize="27sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textFontWeight="1000"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

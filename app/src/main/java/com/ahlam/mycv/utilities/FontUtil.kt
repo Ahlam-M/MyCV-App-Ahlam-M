@@ -14,6 +14,7 @@ package com.ahlam.mycv.utilities
 import android.app.Activity
 import android.content.Context
 import android.graphics.Typeface
+
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -42,12 +43,16 @@ class FontUtil {
         fun typefaceTxt(txtv: TextView) {
             this.setFont(txtv, MyFonts.DEFAULT)
         }
+        fun typefaceTer(txtv: TextView) {
+            this.setFont(txtv, MyFonts.TERMINAL)
+        }
+
 
         //* set selected font for textview *//
         private fun setFont(txtv: TextView, font: MyFonts) {
             txtv.typeface = when(font){
                 MyFonts.TERMINAL -> FONT_TERMINAL
-                else -> FONT_DEFAULT
+                else -> Typeface.create(FONT_DEFAULT, Typeface.BOLD)
             }
         }
 
@@ -80,7 +85,7 @@ fun typeface(activity: Activity, font:MyFonts){
     FontUtil.typefaceAllTextViews(rootView, font)
 }
 fun typeface(v: View){
-    //FontUtil.typefaceAllTextViews(v)
+    FontUtil.typefaceAllTextViews(v, MyFonts.DEFAULT)
 }
 fun typeface(context: Context){
     val rootView = (context as Activity).findViewById<View>(android.R.id.content).rootView
