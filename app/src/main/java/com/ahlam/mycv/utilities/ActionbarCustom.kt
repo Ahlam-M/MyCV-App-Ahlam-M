@@ -32,6 +32,10 @@ fun setCustomActionbar(activity: AppCompatActivity, title: String){
         ViewGroup.LayoutParams.MATCH_PARENT,
         ViewGroup.LayoutParams.MATCH_PARENT
     )
+
+    //set custom font
+    FontUtil.typefaceTer(tv)
+
     //display
     activity.supportActionBar?.customView = tv
 }

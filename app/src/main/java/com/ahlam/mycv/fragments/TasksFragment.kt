@@ -25,6 +25,7 @@ import android.widget.TextView
 import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.MyApplication
 import com.ahlam.mycv.R
+import com.ahlam.mycv.utilities.typeface
 
 /**
  * this class is used to display the professional skills.
@@ -45,6 +46,8 @@ class TasksFragment : Fragment() {
         //set adapter
         listViewTasks.adapter = TasksListAdapter()
 
+        //set custom font
+        typeface(rootView)
         return rootView
     }
 }
@@ -65,6 +68,9 @@ class TasksListAdapter : BaseAdapter() {
 
         //disable clicks
         rowView.setOnClickListener(null)
+
+        //set custom font
+        typeface(rowView)
 
         return rowView
     }
