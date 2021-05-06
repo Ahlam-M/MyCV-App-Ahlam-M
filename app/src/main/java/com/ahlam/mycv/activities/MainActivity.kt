@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.R
+import com.ahlam.mycv.fragments.EduCerFragment
 import com.ahlam.mycv.fragments.TasksFragment
 import com.ahlam.mycv.fragments.TechsFragment
 import com.ahlam.mycv.fragments.WorkExpFragment
@@ -17,8 +18,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
-
-    lateinit var fragment: Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.mi_edu -> {
-                //TODO ft.replace(R.id.frame_main, fragment.newInstance()).commit()
+                ft.replace(R.id.frame_main, EduCerFragment.newInstance()).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.mi_personal -> {
