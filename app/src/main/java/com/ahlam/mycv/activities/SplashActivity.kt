@@ -35,8 +35,8 @@ class SplashActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txt_name).text = InfoSingleton.personal_info.name
         findViewById<TextView>(R.id.txt_profession_title).text = InfoSingleton.personal_info.profession_title
 
-
-        Timer().schedule(3000){
+        //TODO FIX 3000
+        Timer().schedule(1000){
 
             //got to intro activity  //TODO FIX to IntoActivity
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
