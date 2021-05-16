@@ -9,7 +9,6 @@
   ~ Github : Ahlam-M
   -->
 
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/sv"
@@ -22,17 +21,18 @@
         android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
+        <!-- views will be added programmatically here -->
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:gravity="center_horizontal"
-            android:text="@string/education"
-            android:textColor="@color/red_oxide"
-            android:textSize="27sp"
-            android:textStyle="bold" />
+            android:src="@drawable/illu_courses"/>
+
     </LinearLayout>
 
 </ScrollView>
