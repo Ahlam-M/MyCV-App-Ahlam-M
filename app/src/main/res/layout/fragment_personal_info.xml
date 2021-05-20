@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ fragment_personal_info.xml
   ~
   ~ Created on 16 May 2021
@@ -10,16 +9,124 @@
   ~ Github : Ahlam-M
   -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="left"
+    android:orientation="vertical"
     tools:context=".fragments.PersonalInfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="@string/professional_skills"
+        android:textColor="@color/red_oxide"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:padding="0dp">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/img_lamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/illu_lamp" />
+
+        <TextView
+            android:id="@+id/txt_discipline"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_toRightOf="@id/img_lamp"
+            android:background="@drawable/shp_rnd1"
+            android:gravity="center"
+            android:text="test"
+            android:textColor="@color/dark_purple"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_hardwork"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/txt_discipline"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@+id/txt_teamwork"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shp_rnd2"
+            android:gravity="center"
+            android:text="test"
+            android:textColor="@color/red_oxide"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_teamwork"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="150dp"
+
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/txt_discipline"
+            android:background="@drawable/shp_shrp1"
+            android:gravity="center"
+            android:text="test"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_lead"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_below="@id/txt_teamwork"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/txt_hardwork"
+            android:background="@drawable/shp_circle"
+            android:gravity="center"
+            android:text="test"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_learn"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/txt_hardwork"
+
+            android:layout_alignLeft="@id/txt_hardwork"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/shp_shrp2"
+            android:gravity="center"
+            android:text="test"
+            android:textColor="@color/red_oxide"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_motivate"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/txt_lead"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@id/txt_learn"
+            android:background="@drawable/shp_shrp2_2"
+            android:gravity="center"
+            android:text="test"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>
