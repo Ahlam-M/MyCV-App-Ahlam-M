@@ -1,10 +1,10 @@
 package com.ahlam.mycv.activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.ahlam.mycv.InfoSingleton
 import com.ahlam.mycv.R
@@ -26,16 +26,28 @@ class MainActivity : AppCompatActivity() {
         //show custom actionbar
         setCustomActionbar(this@MainActivity, InfoSingleton.personal_info.name + " CV")
 
-
-
         //hock bttm nav bar
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_bttm)
         //set on item selected listener
-        bottomNavigationView.setOnNavigationItemSelectedListener(onBottomNavigationItemSelectedListener)
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+            onBottomNavigationItemSelectedListener
+        )
         //select first fragment by default
         bottomNavigationView.selectedItemId = R.id.mi_work_exp
-
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_contact, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.mi_contact_me){
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
     private val onBottomNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
 
@@ -65,6 +77,4 @@ class MainActivity : AppCompatActivity() {
         }
         false
     }
-
-
 }
