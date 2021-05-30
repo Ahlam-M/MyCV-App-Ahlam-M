@@ -43,7 +43,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.mi_contact_me){
-
+            //open contact me activity
+            val intent = Intent(this@MainActivity, ContactMeActivity::class.java)
+            startActivity(intent)
         }
         return super.onOptionsItemSelected(item)
     }

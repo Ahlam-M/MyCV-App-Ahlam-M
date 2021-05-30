@@ -35,7 +35,7 @@ class SplashActivity : AppCompatActivity() {
 
 
         Timer().schedule(3000){
-            //got to intro activity
+            //go to intro activity
             val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
             this@SplashActivity.finish()
