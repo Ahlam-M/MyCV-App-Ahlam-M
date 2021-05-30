@@ -27,12 +27,6 @@ class ContactMeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_me)
 
-        //set custom font
-        typeface(this@ContactMeActivity)
-
-        //show custom actionbar
-        setCustomActionbar(this@ContactMeActivity, InfoSingleton.personal_info.name + " Info.")
-
         //* personal info *//
         val lblPersonalInfo : Array<String> = arrayOf(
             getStr(R.string.name),
@@ -48,15 +42,16 @@ class ContactMeActivity : AppCompatActivity() {
             InfoSingleton.personal_info.social_state,
             InfoSingleton.personal_info.languages)
 
-        for(i in 0..4){
+        for(i in lblPersonalInfo.indices){
             val v : View = View.inflate(this, R.layout.item_personal_info, null)
             //fill in data
-            v.findViewById<TextView>(R.id.txt_label).text = lblPersonalInfo[i]
+            v.findViewById<TextView>(R.id.txt_label).text = lblPersonalInfo[i] + " : "
             v.findViewById<TextView>(R.id.txt_info).text = lblPersonalInfoval[i]
 
             //add it to personal section view
             findViewById<LinearLayout>(R.id.ll_per_info).addView(v)
         }
+
 
         //* contact info *//
         val lblContactInfo : Array<String> = arrayOf(
@@ -73,14 +68,20 @@ class ContactMeActivity : AppCompatActivity() {
             InfoSingleton.contact_info.linkedin,
             InfoSingleton.contact_info.github)
 
-        for(i in 0..4){
+        for(i in lblContactInfo.indices){
             val v : View = View.inflate(this, R.layout.item_personal_info, null)
             //fill in data
-            v.findViewById<TextView>(R.id.txt_label).text = lblContactInfo[i]
+            v.findViewById<TextView>(R.id.txt_label).text = lblContactInfo[i] + " : "
             v.findViewById<TextView>(R.id.txt_info).text = lblContactInfoval[i]
 
             //add it to contact section view
             findViewById<LinearLayout>(R.id.ll_contact_info).addView(v)
         }
+
+        //set custom font (after adding all views)
+        typeface(this@ContactMeActivity)
+
+        //show custom actionbar
+        setCustomActionbar(this@ContactMeActivity, InfoSingleton.personal_info.name + " Info.")
     }
 }
