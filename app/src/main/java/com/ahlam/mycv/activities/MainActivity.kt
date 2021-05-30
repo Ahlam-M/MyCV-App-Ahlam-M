@@ -1,6 +1,7 @@
 package com.ahlam.mycv.activities
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -16,9 +17,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         //set custom font
         typeface(this@MainActivity)
@@ -38,6 +43,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_contact, menu)
+
+        val dr : AnimationDrawable = resources.getDrawable(R.drawable.actionbar_contact_me) as AnimationDrawable
+        val mi : MenuItem? = menu?.findItem(R.id.mi_contact_me)
+        mi?.icon = dr
+        window.decorView.post { dr.start() }
+
         return super.onCreateOptionsMenu(menu)
     }
 

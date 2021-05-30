@@ -8,7 +8,7 @@
     <string name="next">Go to CV</string>
 
     <string name="name">Name</string>
-    <string name="profession_title">Profession Title</string>
+    <string name="profession_title">Title</string>
     <string name="dob">Birth date</string>
     <string name="social_state">Social State</string>
     <string name="languages">Languages</string>
