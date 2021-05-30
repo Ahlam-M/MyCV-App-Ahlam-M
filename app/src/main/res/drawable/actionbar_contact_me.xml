@@ -12,6 +12,9 @@
 
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:oneshot="false">
+
+    <item android:drawable="@drawable/ic_info" android:duration="2000" />
+    <item android:drawable="@drawable/ic_person" android:duration="2000" />
     <item android:drawable="@drawable/ic_call" android:duration="2000"/>
     <item android:drawable="@drawable/ic_email_1" android:duration="2000" />
     <item android:drawable="@drawable/ic_email_2" android:duration="2000" />
