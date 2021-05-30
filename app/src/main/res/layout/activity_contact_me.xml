@@ -10,15 +10,23 @@
   ~ Github : Ahlam-M
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="left"
-    android:background="@color/white"
-    android:padding="20dp"
-    tools:context=".activities.ContactMeActivity">
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:background="@color/white"
+        android:padding="20dp"
+        tools:context=".activities.ContactMeActivity">
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,3 +65,4 @@
         android:layout_height="wrap_content"/>
 
 </LinearLayout>
+</ScrollView>
