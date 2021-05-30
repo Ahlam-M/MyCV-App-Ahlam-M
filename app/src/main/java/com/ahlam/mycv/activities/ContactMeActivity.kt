@@ -12,8 +12,11 @@
 package com.ahlam.mycv.activities
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
@@ -102,5 +105,18 @@ class ContactMeActivity : AppCompatActivity() {
 
         //show custom actionbar
         setCustomActionbar(this@ContactMeActivity, InfoSingleton.personal_info.name + " Info.")
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_back, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.mi_back){
+            //close activity
+            this@ContactMeActivity.finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
