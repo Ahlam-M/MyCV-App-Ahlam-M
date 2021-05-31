@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyCV-AhlamM</string>
+    <string name="app_name">CV Ahlam Mhmd</string>
 
     <string name="welcome">Welcome to my CV App</string>
     <string name="app_language_is_kotlin">This app has been developed in Kotlin</string>

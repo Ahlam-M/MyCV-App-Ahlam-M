@@ -28,7 +28,7 @@ interface TypingTerminalEffect {
 
             //start at part 0.015 of second
             //interval set to 0.015 to increase speed of process
-            object : CountDownTimer((150 * (chararray.size + 2)).toLong(), 150) {
+            object : CountDownTimer((150 * (chararray.size + 1)).toLong(), 150) {
                 override fun onTick(secondsUntilDone: Long) {
 
                     //remove cursor (_)
