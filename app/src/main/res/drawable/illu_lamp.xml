@@ -1,0 +1,36 @@
+<!--
+  ~ illu_lamp.xml
+  ~
+  ~ Created on 16 May 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="182.674dp"
+    android:height="539.284dp"
+    android:viewportWidth="182.674"
+    android:viewportHeight="539.284">
+  <path
+      android:pathData="M102.751,32.669 L80.923,7.212a8.493,8.493 0,0 0,-13.3 0l0,0L9.507,74.974A23.889,23.889 0,0 0,4 90.472L4,539.289"
+      android:strokeAlpha="0.279"
+      android:strokeWidth="8"
+      android:fillColor="#00000000"
+      android:fillType="evenOdd"
+      android:strokeColor="#cbcbcb"
+      android:fillAlpha="0.279"/>
+  <path
+      android:pathData="M100.055,31.436l-0,0a38.8,38.8 90,0 0,0 54.871L123.328,109.58L178.2,54.709L154.924,31.433A38.8,38.8 90,0 0,100.055 31.436Z"
+      android:strokeAlpha="0.279"
+      android:fillColor="#707070"
+      android:fillType="evenOdd"
+      android:fillAlpha="0.279"/>
+  <path
+      android:pathData="M177.271,54.077a7.641,38.795 45,1 0,-54.864 54.864a7.641,38.795 45,1 0,54.864 -54.864z"
+      android:strokeAlpha="0.279"
+      android:fillColor="#e6e6e6"
+      android:fillAlpha="0.279"/>
+</vector>

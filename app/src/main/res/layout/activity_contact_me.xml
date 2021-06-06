@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ activity_contact_me.xml
+  ~
+  ~ Created on 21 May 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:background="@color/white"
+        android:padding="20dp"
+        tools:context=".activities.ContactMeActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="@string/personal_info"
+        android:textColor="@color/red_oxide"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_per_info"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="@string/contact_info"
+        android:textColor="@color/red_oxide"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/ll_contact_info"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+</ScrollView>

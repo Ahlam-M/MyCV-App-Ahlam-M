@@ -14,9 +14,10 @@ package com.ahlam.mycv
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import com.ahlam.mycv.utilities.FontUtil
 
 
-fun getStr(id : Int) : String {
+fun getStr(id: Int): String {
     return MyApplication.globalContext.getString(id)
 }
 
@@ -30,5 +31,10 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         globalContext = this.applicationContext
+
+        //initiate fonts
+        FontUtil.init()
     }
 }
+
+

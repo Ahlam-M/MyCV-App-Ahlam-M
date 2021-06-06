@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ gr_frgrnd_trans.xml
+  ~
+  ~ Created on 14 Apr 2021
+  ~ for "MyCV-Ahlam M"
+  ~ Copyright (c) 2021. All rights reserved.
+  ~
+  ~ by developer Ahlam Mhmd
+  ~ Github : Ahlam-M
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:angle="270"
+        android:type="linear"
+        android:startColor="#23531E1E"
+        android:centerColor="#F02A252E"
+        android:endColor="#3C2A252E"/>
+</shape>

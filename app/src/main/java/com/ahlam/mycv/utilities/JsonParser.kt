@@ -16,7 +16,7 @@ import com.ahlam.mycv.model.EntityEdu
 import com.ahlam.mycv.model.EntityPersonInfo
 import org.json.JSONArray
 import org.json.JSONObject
-import java.util.ArrayList
+import java.util.*
 
 class JsonParser {
 
@@ -34,7 +34,7 @@ class JsonParser {
                 //parse item according to type T
                 EntityPersonInfo::class -> EntityPersonInfo.parse(obj as JSONObject) as T
                 EntityContactInfo::class -> EntityContactInfo.parse(obj as JSONObject) as T
-                String::class -> InfoSingleton.jsonAll.getString(obj as String) as T
+                String::class -> obj as T
                 //else -> T::class.javaClass.getMethod("parse").invoke(InfoSingleton.jsonAll.getJSONObject(name)) as T
                 else -> T::class.java.newInstance()
             }

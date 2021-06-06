@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:foreground="@drawable/illu_work_expr_bkgrnd"
+    tools:context=".fragments.WorkExpFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="@string/work_experience"
+        android:textColor="@color/red_oxide"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:textFontWeight="1000"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lv_work_expr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/elev_line" />
+    </RelativeLayout>
+
+
+</LinearLayout>
