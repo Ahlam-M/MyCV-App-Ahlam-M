@@ -53,6 +53,7 @@ class IntroActivity : AppCompatActivity() , TypingTerminalEffect {
                 super.onTypingDone()
                 //show button next
                 btnNext.startAnimation(slideLTR)
+
             }
         }
         //start typing
